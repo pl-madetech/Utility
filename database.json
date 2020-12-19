@@ -1,0 +1,19 @@
+{
+    "development": {
+        "driver": "mssql",
+        "user": "sa",
+        "password": "P@55w0rd",
+        "server": "localhost",
+        "database": "nhs_virtual_visit_dev",
+        "options": {
+            "encrypt": true,
+            "validateBulkLoadParameters": false,
+            "truestedConnection": true,
+            "enableArithAbort": true,
+            "integratedSecurity": true,
+            "trustServerCertificate": true,
+            "rowCollectionOnDone": true
+        }
+    },
+    "sql-file": true
+}
