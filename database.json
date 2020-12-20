@@ -1,11 +1,11 @@
 {
     "local": {
-        "driver": "mssql",
-        "user": "sa",
-        "password": "P@55w0rd",
-        "server": "localhost",
-        "database": "nhs_virtual_visit_dev",
-        "port": 1433,
+        "driver":       { "ENV": "DB_DRIVER" },
+        "user":         { "ENV": "DB_USER" },
+        "password":     { "ENV": "DB_PASSWORD" },
+        "server":       { "ENV": "DB_SERVER" },
+        "database":     { "ENV": "DB_DATABASE" },
+        "port":         1433,
         "options": {
             "encrypt": true,
             "validateBulkLoadParameters": false,
@@ -17,12 +17,12 @@
         }
     },
     "dev": {
-        "driver": "mssql",
-        "user": "nhssqlserverless",
-        "password": "Pf,G=!R.;bb,L8Vp",
-        "server": "nhsvirtualvisitdev.database.windows.net",
-        "database": "nhs_virtual_visit_dev",
-        "port": 1433,
+        "driver":       { "ENV": "DEV_DB_DRIVER" },
+        "user":         { "ENV": "DEV_DB_USER" },
+        "password":     { "ENV": "DEV_DB_PASSWORD" },
+        "server":       { "ENV": "DEV_DB_SERVER" },
+        "database":     { "ENV": "DEV_DB_DATABASE" },
+        "port":         1433,
         "options": {
             "encrypt": true,
             "validateBulkLoadParameters": false,
