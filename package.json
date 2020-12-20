@@ -8,7 +8,8 @@
     "uuid": "run-func .\\src\\uuid_play.js init",
     "tedious": "run-func .\\src\\tedious_play.js init",
     "mssql": "run-func .\\src\\mssql_play.js init",
-    "dbmigrate-up": "db-migrate up"
+    "dbmigrate-up-local": "cross-env NODE_ENV=local && cd docker && docker-compose up -d && cd .. && db-migrate up -e local",
+    "dbmigrate-up-dev": "cross-env NODE_ENV=dev db-migrate up -e dev"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +24,8 @@
     "run-func": "^1.0.5",
     "tedious": "^9.2.1",
     "uuidv4": "^6.2.6"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
