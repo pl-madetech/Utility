@@ -23,7 +23,7 @@ exports.up = function (db) {
     var filePath = path.join(
         __dirname,
         "sqls",
-        "20201218000002-create-user-table.sql"
+        "20201218000003-create-facility-table.sql"
     );
     return new Promise(function (resolve, reject) {
         fs.readFile(filePath, { encoding: "utf-8" }, function (err, data) {
