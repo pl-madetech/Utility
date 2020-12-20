@@ -8,8 +8,7 @@
     "uuid": "run-func .\\src\\uuid_play.js init",
     "tedious": "run-func .\\src\\tedious_play.js init",
     "mssql": "run-func .\\src\\mssql_play.js init",
-    "dbmigrate-up": "db-migrate up",
-    "dbmigrate-down": "db-migrate down"
+    "dbmigrate-up": "db-migrate up"
   },
   "keywords": [],
   "author": "",

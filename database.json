@@ -1,10 +1,28 @@
 {
-    "development": {
+    "local": {
         "driver": "mssql",
         "user": "sa",
         "password": "P@55w0rd",
         "server": "localhost",
         "database": "nhs_virtual_visit_dev",
+        "port": 1433,
+        "options": {
+            "encrypt": true,
+            "validateBulkLoadParameters": false,
+            "truestedConnection": true,
+            "enableArithAbort": true,
+            "integratedSecurity": true,
+            "trustServerCertificate": true,
+            "rowCollectionOnDone": true
+        }
+    },
+    "dev": {
+        "driver": "mssql",
+        "user": "nhssqlserverless",
+        "password": "Pf,G=!R.;bb,L8Vp",
+        "server": "nhsvirtualvisitdev.database.windows.net",
+        "database": "nhs_virtual_visit_dev",
+        "port": 1433,
         "options": {
             "encrypt": true,
             "validateBulkLoadParameters": false,

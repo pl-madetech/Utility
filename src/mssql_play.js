@@ -4,9 +4,9 @@ const sql = require('mssql')
 module.exports.init = function () {
 
     const config = {
-        user: 'sa',
-        password: 'P@55w0rd',
-        server: 'localhost',
+        user: 'nhssqlserverless',
+        password: 'Pf,G=!R.;bb,L8Vp',
+        server: 'nhsvirtualvisitdev.database.windows.net',
         database: 'nhs_virtual_visit_dev',
         options: {
             encrypt: true,
@@ -29,12 +29,6 @@ module.exports.init = function () {
             .query('select * from dbo.[user]')
     }).then(result => {
         console.dir(result);
-
-        result.recordset.forEach(function (element) {
-            console.log(element.id);
-            console.log(element.password);
-        });
-
     }).catch(err => {
         console.error('Catch err: ', err);
     });
