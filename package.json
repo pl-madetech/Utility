@@ -8,7 +8,7 @@
     "uuid": "run-func .\\src\\uuid_play.js init",
     "tedious": "run-func .\\src\\tedious_play.js init",
     "mssql": "run-func .\\src\\mssql_play.js init",
-    "dbmigrate-up-local": "cross-env NODE_ENV=local db-migrate up -e local",
+    "dbmigrate-up-local": "db-migrate up -e local",
     "dbmigrate-up-dev": "db-migrate up -e dev"
   },
   "keywords": [],
