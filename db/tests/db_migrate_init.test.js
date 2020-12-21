@@ -27,6 +27,8 @@ describe("db-migrate databse setup ready", () => {
         // close resource else blocks process.
         db.close();
     });
+
+    // TODO create test for organisations, check if the table as more than one record.
 });
 
 const retrieveAdminUser = async (db) => {
