@@ -1,7 +1,7 @@
 import Database from "../gateways/Database";
 
 class AppContainer {
-    getDb = async () => {
+    getDb = () => {
         return Database.getInstance();
     };
 }
