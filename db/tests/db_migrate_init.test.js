@@ -23,6 +23,9 @@ describe("db-migrate databse setup ready", () => {
                 status: 1,
             }
         ]);
+
+        // close resource else blocks process.
+        db.close();
     });
 });
 
