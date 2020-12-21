@@ -33,4 +33,14 @@ module.exports.init = function () {
     }).catch(err => {
         console.error('Catch err: ', err);
     });
+
+    sql.connect(config).then(pool => {
+        return pool.request().query('select * from dbo.[user] where id = 1')
+    }).then(result => {
+        console.dir(result);
+    }).then(() => {
+        return sql.close();
+    }).catch(err => {
+        console.error('Catch err: ', err);
+    });
 }
