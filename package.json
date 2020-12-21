@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .js",
+    "test": "jest --silent",
     "bcrypt": "run-func .\\src\\bcrypt_play.js init",
     "uuid": "run-func .\\src\\uuid_play.js init",
     "tedious": "run-func .\\src\\tedious_play.js init",
     "mssql": "run-func .\\src\\mssql_play.js init",
-    "dbmigrate-up-local": "db-migrate up -e local",
-    "dbmigrate-up-dev": "db-migrate up -e dev"
+    "dbmigrate-up-local": "db-migrate up --migrations-dir db/migrations/ -e local",
+    "dbmigrate-up-dev": "db-migrate up --migrations-dir db/migrations/ -e dev"
   },
   "keywords": [],
   "author": "",
