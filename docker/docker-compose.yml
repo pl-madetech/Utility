@@ -1,10 +1,6 @@
 version: "3"
 
 services:
-  mssqldata:
-    image: microsoft/mssql-server-linux:latest
-    entrypoint: /bin/bash
-    container_name: nhs-virtual-visit-data
   mssql:
     image: microsoft/mssql-server-linux:latest
     container_name: nhs-virtual-visit
@@ -21,6 +17,3 @@ services:
     environment:
       ACCEPT_EULA: Y
       SA_PASSWORD: P@55w0rd
-    # don't use this if you don't want to persit data between docker up and down
-    volumes_from:
-      - mssqldata
