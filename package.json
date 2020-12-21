@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .js",
     "bcrypt": "run-func .\\src\\bcrypt_play.js init",
     "uuid": "run-func .\\src\\uuid_play.js init",
     "tedious": "run-func .\\src\\tedious_play.js init",
@@ -21,12 +22,29 @@
     "db-migrate": "^0.11.11",
     "db-migrate-mssql": "^2.1.0",
     "dotenv": "^5.0.1",
+    "jest": "^26.6.3",
     "mssql": "^6.3.0",
+    "react": "^17.0.1",
     "run-func": "^1.0.5",
     "tedious": "^9.2.1",
     "uuidv4": "^6.2.6"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "babel-eslint": "^8.2.6",
+    "cross-env": "^7.0.3",
+    "eslint": "^4.19.1",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-react": "^7.21.5"
+  },
+  "lint-staged": {
+    "*.{js,css,md,yml}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix --ext .js"
+    ]
+  },
+  "engines": {
+    "node": "12.16.x"
   }
 }
